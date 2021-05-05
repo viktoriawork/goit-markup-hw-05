@@ -405,8 +405,11 @@ img {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
-
   cursor: pointer;
+}
+.item .clients-logo:hover{
+  background-color: var(--c-accent-color);
+  color:var(--c-background-color);
 }
 .item .thumb:hover .clients-logo,
 .logo-focus:focus .clients-logo {
