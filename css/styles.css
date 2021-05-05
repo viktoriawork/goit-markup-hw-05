@@ -109,12 +109,15 @@ img {
 .site-nav .menu-link:hover,
 .site-nav .menu-link:focus {
   color: var(--c-accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .studio.current {
   color: var(--c-accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .portfolio.current {
   color: var(--c-accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link {
   display: block;
@@ -129,10 +132,12 @@ img {
 .contacts .contact-link:focus .icon-mail,
 .contacts .contact-link:focus .icon-smartphone {
   fill: var(--c-accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
   color: var(--c-accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header {
@@ -224,6 +229,7 @@ img {
 .button:hover,
 .button:focus {
   cursor: pointer;
+  /* transition: cursor 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .button-order {
   width: 200px;
@@ -373,6 +379,7 @@ img {
 
 .circle:hover,
 .circle:focus {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: var(--c-accent-color);
   fill: #ffffff;
 }
@@ -408,15 +415,19 @@ img {
   cursor: pointer;
 }
 .item .clients-logo:hover{
- fill:var(--c-accent-color)
+ fill:var(--c-accent-color);
+ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .item .thumb:hover .clients-logo,
 .logo-focus:focus .clients-logo {
   /*  */
   fill: var(--c-accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item .thumb:hover,
 .item .thumb:focus {
+  transition:border 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid #2196f3;
   border-radius: 4px;
 }
@@ -496,7 +507,8 @@ img {
 }
 .join-icon:hover,
 .join-icon:focus {
-  background: #2196f3;
+  background-color: #2196f3;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ======================================PORTFOLIO============================ */
 .section-pos.filters {
@@ -521,11 +533,15 @@ img {
 }
 .filters-button:hover,
 .filters-button:focus {
+  
   cursor: pointer;
   background-color: #2196f3;
   color: white;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ==========================PORTFOLIO========================= */
 .portfolio-projects {
@@ -546,8 +562,8 @@ img {
 .portfolio-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
   cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-content {
   padding: 20px 24px;
