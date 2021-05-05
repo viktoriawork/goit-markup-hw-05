@@ -408,15 +408,15 @@ img {
   cursor: pointer;
 }
 .item .clients-logo:hover{
-  background-color: var(--c-accent-color);
-  color:var(--c-background-color);
+ fill:var(--c-accent-color)
 }
 .item .thumb:hover .clients-logo,
 .logo-focus:focus .clients-logo {
   /*  */
   fill: var(--c-accent-color);
 }
-.item .thumb:hover .item .thumb:focus {
+.item .thumb:hover,
+.item .thumb:focus {
   border: 1px solid #2196f3;
   border-radius: 4px;
 }
