@@ -72,7 +72,7 @@
             Эффективные решения<br />
             для вашего бизнеса
           </h1>
-          <button type="button" class="button button-order">
+          <button data-modal-open type="button" class="button button-order">
             Заказать услугу
           </button>
         </div>
@@ -153,7 +153,9 @@
                 alt="Написание кода"
                 width="370"
                 height="294"
+        
               />
+                <p class="ww-do-desk">Десктопные приложения</p>
             </li>
             <li class="what-we-do-item">
               <img
@@ -162,6 +164,7 @@
                 width="370"
                 height="294"
               />
+              <p class="ww-do-desk">Мобильные приложения</p>
             </li>
             <li class="what-we-do-item">
               <img
@@ -170,6 +173,7 @@
                 width="370"
                 height="294"
               />
+              <p class="ww-do-desk">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -501,5 +505,15 @@
         </div>
       </div>
     </footer>
+    <div  data-modal class="backdrop is-hidden">
+      <div class="modal">
+      <button data-modal-close type="button" class="modal-close">
+        <svg class="icon-close">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      </div>
+    </div>
+    <script src="./modal.js"></script>
   </body>
 </html>

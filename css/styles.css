@@ -7,6 +7,18 @@
   --c-background-color: #fff;
   --c-banner-color: #2f303a;
 }
+/* Hidden SMTH */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* Сброс стандартных настроек */
 h1,
 h2,
@@ -82,6 +94,7 @@ img {
 }
 
 .site-nav {
+  position:relative;
   display: flex;
   margin-left: 93px;
   color: var(--txt-nav-color);
@@ -112,12 +125,36 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .studio.current {
+  position:relative;
   color: var(--c-accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .portfolio.current {
+  position:relative;
   color: var(--c-accent-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-nav .studio.current::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #2196F3;
+  height: 4px;
+  width: 100%;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+.portfolio.current::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #2196F3;
+  height: 4px;
+  width: 100%; 
+  bottom: 0;
+  border-radius: 2px;
+
 }
 .menu-link {
   display: block;
@@ -296,17 +333,30 @@ img {
   text-align: center;
 }
 .what-we-do-list {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
 .what-we-do-item {
+  position:relative;
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
 }
-
+.ww-do-desk{
+  position:absolute;
+  bottom: 0;
+  left:0%;
+  right:0;
+  padding-top:27px;
+  text-align:center;
+  padding-bottom: 27px;
+  background: rgba(47, 48, 58, 0.8);
+  color:white;
+  text-transform: uppercase;
+}
 /* =================================OUR TEAM=============================== */
 
 .our-team {
@@ -546,6 +596,7 @@ img {
 /* ==========================PORTFOLIO========================= */
 .portfolio-projects {
   padding-top: 0px;
+  position:relative;
 }
 .portfolio-list {
   display: flex;
@@ -579,4 +630,87 @@ img {
 .portfolio-desk {
   font-size: 16px;
   line-height: 1.87;
+}
+.card-overlay{
+  position:relative;
+  overflow: hidden;
+
+}
+.card-description{
+  top:50%;
+  left:50%;
+  width: 100%;
+  height: 298px;
+  transform: translate(-50%, 50%);
+  position: absolute;
+  text-align:left;
+  background-color: var(--c-accent-color);
+  color:white;
+  padding: 63px 24px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+visibility: hidden;
+  letter-spacing: 0.03em;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover .card-description,
+.portfolio-item:focus .card-description{
+  overflow: visible;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  
+}
+/* MODAL WINDOW */
+.backdrop{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden{
+  opacity:0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.modal{
+position: absolute;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%) scale(1);
+min-width: 528px;
+min-height: 581px;
+
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+background: #FFFFFF;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+
+padding-left: 15px;
+padding-right: 15px;
+}
+.modal-close{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+.modal-close .icon-close{
+  position:absolute;
+  width: 18px;
+  height: 18px;
+  left: 18%;
+  top: 18%;
+   
+}
+.modal-close .icon-close:hover{
+  fill: var(--c-accent-color);
 }
